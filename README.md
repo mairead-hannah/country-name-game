@@ -1,2 +1,2 @@
 # country-name-game
-An online game to test your knowledge of country names in Asia!
+An online game to test your knowledge of country names in Asia built using JavaScript!
