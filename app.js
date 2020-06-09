@@ -1,21 +1,37 @@
-const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
+// const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
 
+// const answer = (guess) => {
+//   for (let i = 0; i < southAsia.length; i++) {
+//     if (southAsia.includes(guess)) return `Correct!`
+//     else return `Oops that wasn't right, try again!`
+//   }
+// }
+// console.log(answer("pakistan"));
 
-const answer = (guess) => {
-  for (let i = 0; i < southAsia.length; i++) {
-    if (southAsia.includes(guess)) return `Correct!`
-    else return `Oops that wasn't right, try again!`
-  }
-}
-console.log(answer("pakistan"));
+
+const onClick = (event) => {
+  event.preventDefault()
+  document.getElementById("feedback").innerHTML = "Testing!";
+};
+
+
+const button = document.getElementsByTagName("button")[0];
+console.log(button);
+
+button.addEventListener("click", onClick);
+
 
 
 
 //--------------------------------------------------------------------------------
-//Issues to resolve
+//To Do
+//link to DOM, click event etc
 //Remove correct items from the array for the following guesses
 //Congratulation message when the user has guessed all the countries
+
+
+//Issues to resolve
 //Allow for either uppercase or lowercase letters
 //Reset button to begin again
 
