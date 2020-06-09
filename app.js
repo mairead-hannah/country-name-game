@@ -1,40 +1,40 @@
-// const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
+//Array of correct answers
+const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
-
-// const answer = (guess) => {
-//   for (let i = 0; i < southAsia.length; i++) {
-//     if (southAsia.includes(guess)) return `Correct!`
-//     else return `Oops that wasn't right, try again!`
-//   }
-// }
-// console.log(answer("pakistan"));
-
-
-const onClick = (event) => {
-  event.preventDefault()
-  document.getElementById("feedback").innerHTML = "Testing!";
+//array and function to check if an answer is correct
+const answer = (guess) => {
+    if (southAsia.includes(guess)) return `Correct!`
+    else return `Oops that wasn't right, try again!`
 };
 
 
-const button = document.getElementsByTagName("button")[0];
-console.log(button);
 
+// Function to return feedback from input field
+const onClick = (event) => {
+  event.preventDefault()
+  const input = document.getElementById("text-input").value;
+  document.getElementById("feedback").innerHTML = answer(input);
+};
+
+//Event listener for submit button
+const button = document.getElementsByTagName("button")[0];
 button.addEventListener("click", onClick);
+
+
 
 
 
 
 //--------------------------------------------------------------------------------
 //To Do
-//link to DOM, click event etc
+//How to grab the user's text input to test their answer
+//reset button to begin again
 //Remove correct items from the array for the following guesses
 //Congratulation message when the user has guessed all the countries
 
 
 //Issues to resolve
 //Allow for either uppercase or lowercase letters
-//Reset button to begin again
-
 
 //Extra stuff
 //Display the correct guesses on the browser
@@ -70,3 +70,34 @@ button.addEventListener("click", onClick);
 // If you want to push yourself, try and build it using classes to be fully object oriented!!!
 // ​
 // BEST OF LUCK!
+
+
+
+
+
+
+//copies of stuff below--------------------------------------------------------------------------------------------
+// //Array of correct answers
+// const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
+
+// //array and function to check if an answer is correct
+// const answer = (guess) => {
+//   for (let i = 0; i < southAsia.length; i++) {
+//     if (southAsia.includes(guess)) return `Correct!`
+//     else return `Oops that wasn't right, try again!`
+//   }
+// }
+// console.log(answer("pakistan"));
+
+
+
+// // Event listener on submit button
+// const onClick = (event) => {
+//   event.preventDefault()
+//   document.getElementById("feedback").innerHTML = "You've submitted an answer!";
+// };
+
+// const button = document.getElementsByTagName("button")[0];
+// console.log(button);
+
+// button.addEventListener("click", onClick);
