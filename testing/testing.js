@@ -1,7 +1,7 @@
 //Array of correct answers
 const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
-
+// const OpenSuccessWindow = window.open(<a href="./testing-success.html"></a>);
 
 //array and function to check if an answer is correct
 const answer = (guess) => {
@@ -17,6 +17,10 @@ const answer = (guess) => {
     //Eliminating correct guesses from the original array:
     findIndex = southAsia.indexOf(document.getElementById("text-input").value);
     const removeItem = southAsia.splice(findIndex, 1);
+
+    //The following command opens another window, but needs to be linked to the success criteria
+    //open(href="./testing-success.html");
+
     
     //return must remain at the end because it stops the function running
     return `Correct!` 
