@@ -1,12 +1,26 @@
 //Array of correct answers
 const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
+
 //array and function to check if an answer is correct
 const answer = (guess) => {
-    if (southAsia.includes(guess)) return `Correct!`
-    else return `Oops that wasn't right, try again!`
+  if (southAsia.includes(guess)) {
+    //Creates a new 'LI list' of correct guesses to display
+    //need to change the text added to match the user input
+    const correctGuessList = document.createElement("li");
+    const correctGuesses = document.createTextNode("Country guessed by you");
+    correctGuessList.appendChild(correctGuesses);
+    document.getElementById("correct-guess-list").appendChild(correctGuessList);
+    id="correct-guess-list"
+    //I also want to eliminate correct guesses from the original array and/or create new arrays each time???
+    
+    //return must remain at the end because it stops the function running
+    return `Correct!` 
+  }
+  else {
+    return `Oops that wasn't right, try again!`
+  }
 };
-
 
 
 // Function to return feedback from input field
@@ -27,18 +41,17 @@ button.addEventListener("click", onClick);
 
 //--------------------------------------------------------------------------------
 //To Do
-//How to grab the user's text input to test their answer
-//reset button to begin again
-//Remove correct items from the array for the following guesses
+//Remove correct items from the array to allow multiple guesses
+//pop up 'you've already guessed this country' in case one is typed twice
 //Congratulation message when the user has guessed all the countries
+//reset button to begin again
 
 
 //Issues to resolve
 //Allow for either uppercase or lowercase letters
 
 //Extra stuff
-//Display the correct guesses on the browser
-//pop up 'you've already guessed this country' in case one is typed twice
+//Display the correct guesses on the browser - maybe with country name and flag?
 //Styling - MOBILE FIRST!
 //map colouring in each country as you go - but only if works on a mobile??
 
@@ -77,27 +90,26 @@ button.addEventListener("click", onClick);
 
 
 //copies of stuff below--------------------------------------------------------------------------------------------
+
+
+//----COPY OF MINIMUM VIABLE PRODUCT CODE BELOW-----------------------------------
 // //Array of correct answers
 // const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
 // //array and function to check if an answer is correct
 // const answer = (guess) => {
-//   for (let i = 0; i < southAsia.length; i++) {
 //     if (southAsia.includes(guess)) return `Correct!`
 //     else return `Oops that wasn't right, try again!`
-//   }
-// }
-// console.log(answer("pakistan"));
-
-
-
-// // Event listener on submit button
-// const onClick = (event) => {
-//   event.preventDefault()
-//   document.getElementById("feedback").innerHTML = "You've submitted an answer!";
 // };
 
-// const button = document.getElementsByTagName("button")[0];
-// console.log(button);
 
+// // Function to return feedback from input field
+// const onClick = (event) => {
+//   event.preventDefault()
+//   const input = document.getElementById("text-input").value;
+//   document.getElementById("feedback").innerHTML = answer(input);
+// };
+
+// //Event listener for submit button
+// const button = document.getElementsByTagName("button")[0];
 // button.addEventListener("click", onClick);
