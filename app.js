@@ -1,7 +1,6 @@
 //Array of correct answers
 const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
-
 //array and function to check if an answer is correct
 const answer = (guess) => {
   if (southAsia.includes(guess)) {
@@ -22,17 +21,26 @@ const answer = (guess) => {
   }
 };
 
-
 // Function to return feedback from input field
 const onClick = (event) => {
-  event.preventDefault()
+  event.preventDefault();
   const input = document.getElementById("text-input").value;
   document.getElementById("feedback").innerHTML = answer(input);
 };
-
 //Event listener for submit button
-const button = document.getElementsByTagName("button")[0];
-button.addEventListener("click", onClick);
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", onClick);
+
+
+
+//Reset function that reloads the page
+const resetOnClick = (event) => {
+  event.preventDefault();
+  const reset = location.reload();
+}
+//Event listener for reset button
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", resetOnClick);
 
 
 
@@ -42,9 +50,10 @@ button.addEventListener("click", onClick);
 //--------------------------------------------------------------------------------
 //To Do
 //Remove correct items from the array to allow multiple guesses
-//pop up 'you've already guessed this country' in case one is typed twice
+//pop up 'you've already guessed this country' where one is typed twice
 //Congratulation message when the user has guessed all the countries
-//reset button to begin again
+//get page hosted on github
+//put link to page on website
 
 
 //Issues to resolve
