@@ -11,7 +11,10 @@ const answer = (guess) => {
     correctGuessList.appendChild(correctGuesses);
     document.getElementById("correct-guess-list").appendChild(correctGuessList);
     id="correct-guess-list"
-    //I also want to eliminate correct guesses from the original array and/or create new arrays each time???
+
+    //Eliminating correct guesses from the original array:
+    findIndex = southAsia.indexOf(document.getElementById("text-input").value);
+    const removeItem = southAsia.splice(findIndex, 1);
     
     //return must remain at the end because it stops the function running
     return `Correct!` 
