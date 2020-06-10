@@ -6,9 +6,9 @@ const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sr
 const answer = (guess) => {
   if (southAsia.includes(guess)) {
     //Creates a new 'LI list' of correct guesses to display
-    //need to change the text added to match the user input
     const correctGuessList = document.createElement("li");
-    const correctGuesses = document.createTextNode("Country guessed by you");
+    //QUESTION!! In the line below, why can't I simply put the function 'input' in brackets after 'createTextNode'??  Surely what is typed there is exactly the same as the input function anyway....?
+    const correctGuesses = document.createTextNode(document.getElementById("text-input").value);
     correctGuessList.appendChild(correctGuesses);
     document.getElementById("correct-guess-list").appendChild(correctGuessList);
     id="correct-guess-list"
@@ -49,6 +49,10 @@ button.addEventListener("click", onClick);
 
 //Issues to resolve
 //Allow for either uppercase or lowercase letters
+//capitalise first letter in displayed answers
+//only display <h3>Correct answers</h3> when the answers begin
+//automatically delete text from input field after pressing 'enter' or clicking submit
+
 
 //Extra stuff
 //Display the correct guesses on the browser - maybe with country name and flag?
