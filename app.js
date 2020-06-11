@@ -60,9 +60,8 @@ resetButton.addEventListener("click", resetOnClick);
 //--------------------------------------------------------------------------------
 //To Do
 //Add at least some CSS
-//Congratulation message when the user has guessed all the countries
-//get page hosted on github
 //put link to page on website
+//Perhaps add an image of South Asia? (mobile compatible!)
 
 
 //Issues to resolve

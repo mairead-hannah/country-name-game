@@ -74,14 +74,6 @@ resetButton.addEventListener("click", resetOnClick);
 
 //ref---------------------------------------------------------------------
 
-// const winCriteria = () => {
-//   if (southAsia.length === 0) {
-//     open(href="./testing-success.html");
-//   }
-// }
-
-// console.log(southAsia);
-
 
 
 
