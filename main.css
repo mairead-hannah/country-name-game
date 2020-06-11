@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: tomato;
+  text-align: center;
+  padding: 1em;
+}
+
+p {
+  margin-top: 2em;
+}
+
+#hint {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+form {
+  padding: 1em;
+}
+
+section {
+  height: 8em;
+  font-size: 1.2em;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  padding: 1em;
+}
+/*# sourceMappingURL=main.css.map */
