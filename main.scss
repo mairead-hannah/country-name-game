@@ -4,6 +4,7 @@
   box-sizing: border-box;
   text-align: center;
   font-family: sans-serif;
+  // background-color: papayawhip;
   }
 
 // div {
@@ -11,12 +12,18 @@
 //   margin-top: 1em;
 // }
 
+button {
+  border-radius: 12px;
+  padding: 0.3em;
+}
 
 h1 {
   color: tomato;
   text-align: center;
   padding: 1em;
+  background-color: papayawhip;
 }
+
 
 p {
   margin-top: 2em;
@@ -42,6 +49,7 @@ section {
     li {
       text-align: left;
       text-transform: capitalize;
+      
     }
   }
 }
