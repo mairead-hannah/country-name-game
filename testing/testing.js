@@ -3,30 +3,22 @@ const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sr
 
 
 
-// const winCriteria = () => {
-//   if (southAsia.length === 0) {
-//     open(href="./testing-success.html");
-//   }
-// }
-
-
 
 
 // const OpenSuccessWindow = window.open(<a href="./testing-success.html"></a>);
 
 //array and function to check if an answer is correct
 const answer = (guess) => {
-  if (southAsia.includes(guess)) {
+  if (southAsia.includes(guess.toLowerCase())) {
     //Creates a new 'LI list' of correct guesses to display
     const correctGuessList = document.createElement("li");
-    //QUESTION!! In the line below, why can't I simply put the function 'input' in brackets after 'createTextNode'??  Surely what is typed there is exactly the same as the input function anyway....?
-    const correctGuesses = document.createTextNode(document.getElementById("text-input").value);
+    const correctGuesses = document.createTextNode(guess.charAt(0).toUpperCase() + guess.slice(1).toLowerCase());//The latter part after create Text Node is setting the first letter to be upper case and the rest to be lowercase
     correctGuessList.appendChild(correctGuesses);
     document.getElementById("correct-guess-list").appendChild(correctGuessList);
     id="correct-guess-list"
 
     //Eliminating correct guesses from the original array:
-    findIndex = southAsia.indexOf(document.getElementById("text-input").value);
+    findIndex = southAsia.indexOf(guess.toLowerCase());
     const removeItem = southAsia.splice(findIndex, 1);
     console.log(southAsia);
 

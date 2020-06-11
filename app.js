@@ -3,17 +3,16 @@ const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sr
 
 //array and function to check if an answer is correct
 const answer = (guess) => {
-  if (southAsia.includes(guess)) {
+  if (southAsia.includes(guess.toLowerCase())) {
     //Creates a new 'LI list' of correct guesses to display
     const correctGuessList = document.createElement("li");
-    //QUESTION!! In the line below, why can't I simply put the function 'input' in brackets after 'createTextNode'??  Surely what is typed there is exactly the same as the input function anyway....?
-    const correctGuesses = document.createTextNode(document.getElementById("text-input").value);
+    const correctGuesses = document.createTextNode(guess.charAt(0).toUpperCase() + guess.slice(1).toLowerCase());//The latter part after create Text Node is setting the first letter to be upper case and the rest to be lowercase
     correctGuessList.appendChild(correctGuesses);
     document.getElementById("correct-guess-list").appendChild(correctGuessList);
     id="correct-guess-list"
 
     //Eliminating correct guesses from the original array:
-    findIndex = southAsia.indexOf(document.getElementById("text-input").value);
+    findIndex = southAsia.indexOf(guess.toLowerCase());
     const removeItem = southAsia.splice(findIndex, 1);
     console.log(southAsia); //optional line, but helpful to see what's going on
 
@@ -59,15 +58,11 @@ resetButton.addEventListener("click", resetOnClick);
 
 //--------------------------------------------------------------------------------
 //To Do
-//Add at least some CSS
 //put link to page on website
-//Perhaps add an image of South Asia? (mobile compatible!)
 
 
 //Issues to resolve
-//Allow for either uppercase or lowercase letters
 //pop up 'you've already guessed this country' where one is typed twice
-//capitalise first letter in displayed answers
 //only display <h3>Correct answers</h3> when the answers begin
 //automatically delete text from input field after pressing 'enter' or clicking submit
 
