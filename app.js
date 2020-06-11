@@ -15,10 +15,13 @@ const answer = (guess) => {
     //Eliminating correct guesses from the original array:
     findIndex = southAsia.indexOf(document.getElementById("text-input").value);
     const removeItem = southAsia.splice(findIndex, 1);
+    console.log(southAsia); //optional line, but helpful to see what's going on
 
-    //The following command opens another window, but needs to be linked to the success criteria
-    //open(href="./success.html");
-
+    //The following command opens a new 'success' window when the original array hits 0 in length
+    //ie: all the countries have been guessed correctly :D
+    if (southAsia.length === 0) {
+      open(href="./success.html");
+    }
     
     //return must remain at the end because it stops the function running
     return `Correct!` 
@@ -57,7 +60,6 @@ resetButton.addEventListener("click", resetOnClick);
 //--------------------------------------------------------------------------------
 //To Do
 //Add at least some CSS
-//pop up 'you've already guessed this country' where one is typed twice
 //Congratulation message when the user has guessed all the countries
 //get page hosted on github
 //put link to page on website
@@ -65,6 +67,7 @@ resetButton.addEventListener("click", resetOnClick);
 
 //Issues to resolve
 //Allow for either uppercase or lowercase letters
+//pop up 'you've already guessed this country' where one is typed twice
 //capitalise first letter in displayed answers
 //only display <h3>Correct answers</h3> when the answers begin
 //automatically delete text from input field after pressing 'enter' or clicking submit

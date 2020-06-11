@@ -1,6 +1,17 @@
 //Array of correct answers
 const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sri lanka", "bhutan", "maldives"]
 
+
+
+// const winCriteria = () => {
+//   if (southAsia.length === 0) {
+//     open(href="./testing-success.html");
+//   }
+// }
+
+
+
+
 // const OpenSuccessWindow = window.open(<a href="./testing-success.html"></a>);
 
 //array and function to check if an answer is correct
@@ -17,10 +28,13 @@ const answer = (guess) => {
     //Eliminating correct guesses from the original array:
     findIndex = southAsia.indexOf(document.getElementById("text-input").value);
     const removeItem = southAsia.splice(findIndex, 1);
+    console.log(southAsia);
 
-    //The following command opens another window, but needs to be linked to the success criteria
-    //open(href="./testing-success.html");
-
+    //The following command opens a new 'success' window when the original array hits 0 in length
+    //ie: all the countries have been guessed correctly :D
+    if (southAsia.length === 0) {
+      open(href="./testing-success.html");
+    }
     
     //return must remain at the end because it stops the function running
     return `Correct!` 
@@ -29,6 +43,7 @@ const answer = (guess) => {
     return `Oops that wasn't right, try again!`
   }
 };
+
 
 // Function to return feedback from input field
 const onClick = (event) => {
@@ -50,6 +65,25 @@ const resetOnClick = (event) => {
 //Event listener for reset button
 const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", resetOnClick);
+
+
+
+
+
+
+
+//ref---------------------------------------------------------------------
+
+// const winCriteria = () => {
+//   if (southAsia.length === 0) {
+//     open(href="./testing-success.html");
+//   }
+// }
+
+// console.log(southAsia);
+
+
+
 
 
 
