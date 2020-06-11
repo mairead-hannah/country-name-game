@@ -32,8 +32,18 @@ form {
 }
 
 section {
-  height: 8em;
+  height: 12em;
   font-size: 1.2em;
+  margin: 2em;
+  ol {
+    margin: 1em;
+    display: inline-block;
+    width: 50%;
+    li {
+      text-align: left;
+      text-transform: capitalize;
+    }
+  }
 }
 
 
