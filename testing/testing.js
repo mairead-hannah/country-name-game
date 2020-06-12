@@ -4,9 +4,6 @@ const southAsia = ["india", "pakistan", "afganistan", "bangladesh", "nepal", "sr
 
 
 
-
-// const OpenSuccessWindow = window.open(<a href="./testing-success.html"></a>);
-
 //array and function to check if an answer is correct
 const answer = (guess) => {
   if (southAsia.includes(guess.toLowerCase())) {

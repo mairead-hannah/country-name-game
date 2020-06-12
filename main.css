@@ -36,17 +36,17 @@ section {
   height: 12em;
   font-size: 1.2em;
   margin: 2em;
+  text-align: center;
 }
 
 section ol {
   margin: 1em;
   display: inline-block;
-  width: 50%;
+  text-align: center;
 }
 
 section ol li {
   text-align: left;
-  text-transform: capitalize;
 }
 
 img {

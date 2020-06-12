@@ -4,13 +4,7 @@
   box-sizing: border-box;
   text-align: center;
   font-family: sans-serif;
-  // background-color: papayawhip;
   }
-
-// div {
-//   display: block;
-//   margin-top: 1em;
-// }
 
 button {
   border-radius: 12px;
@@ -23,7 +17,6 @@ h1 {
   padding: 1em;
   background-color: papayawhip;
 }
-
 
 p {
   margin-top: 2em;
@@ -38,18 +31,18 @@ form {
   padding: 1em;
 }
 
+
 section {
   height: 12em;
   font-size: 1.2em;
   margin: 2em;
+  text-align: center;
   ol {
     margin: 1em;
     display: inline-block;
-    width: 50%;
+    text-align: center;
     li {
       text-align: left;
-      text-transform: capitalize;
-      
     }
   }
 }
