@@ -70,6 +70,7 @@ resetButton.addEventListener("click", resetOnClick);
 //Extra stuff
 //Display the correct guesses on the browser - maybe with country name and flag?
 //map colouring in each country as you go - but only if works on a mobile??
+//add a timer function
 
 
 
